@@ -84,7 +84,7 @@ objs.push({y:TENT.y+TENT.h,kind:'tent'});
 inter.push({x:27,y:7.9,r:1.6,id:'home',label:'승주의 한옥 들어가기',kind:'home',tx:27,ty:8.6});
 solid(31.2,6.6,0.6,0.5);objs.push({y:7.1,kind:'mailbox',x:31.5,sy:7.1});
 inter.push({x:31.5,y:7.6,r:1.4,id:'mail',label:'우편함 · 연락하기',kind:'mail',tx:31.5,ty:8.3});
-solid(28.9,11.3,0.3,0.3);objs.push({y:11.6,kind:'bigSign',x:29.6,sy:11.6,label:'승주의 섬',sub:'안내도'});
+solid(28.9,11.3,0.3,0.3);objs.push({y:11.6,kind:'bigSign',x:29.6,sy:11.6,label:'주섬주섬',sub:'안내도'});
 inter.push({x:29.6,y:12,r:1.5,id:'welcome',label:'섬 안내도 보기',kind:'welcome',tx:29.6,ty:12.7});
 // diary desk (blog)
 solid(22.3,10.9,1.6,0.8);objs.push({y:11.7,kind:'diary',x:23.1,sy:11.7});
@@ -443,7 +443,7 @@ function sectionMenu(f){var h=head('🪧 '+f.name+' · '+f.sub)+'<p class="lead"
   f.items.forEach(function(it){h+='<button data-open="'+it[0]+'"><b>'+it[1]+'</b><span>'+it[2]+'</span>'+(it[3]?'<br><span class="aw">★ 수상</span>':'')+'</button>'});
   return h+'</div>'}
 function homeHtml(){var s=tpl('home');return head('🏡 승주의 한옥')+(s?s.innerHTML:'')}
-function welcomeHtml(){return head('🗺️ 승주의 섬 안내도')+'<p class="lead">어서 와요! 이곳은 박승주의 포트폴리오 섬이에요. 마당에서 남쪽 길로 내려가면 작업실 밭과 새싹 밭, 동쪽 다리를 건너면 AI 프로젝트 밭과 야외 영화관이 나와요. 푯말에 다가가 <b>Space</b>(모바일은 <b>A</b>)를 눌러 보세요.</p><ul class="howto"><li>⌨️ 방향키·WASD로 이동, 화면을 클릭/탭해도 걸어가요</li><li>🪧 Space로 푯말·건물 살펴보기, Esc로 닫기</li><li>🧭 T 또는 [섬 메뉴]로 바로 가기</li><li>🌙 N으로 밤의 섬</li></ul><p class="lead" style="margin-top:16px"><b>섬 곳곳</b></p><div class="menu">'+
+function welcomeHtml(){return head('🗺️ 주섬주섬 안내도')+'<p class="lead">어서 와요! 이곳은 박승주의 포트폴리오 섬이에요. 마당에서 남쪽 길로 내려가면 작업실 밭과 새싹 밭, 동쪽 다리를 건너면 AI 프로젝트 밭과 야외 영화관이 나와요. 푯말에 다가가 <b>Space</b>(모바일은 <b>A</b>)를 눌러 보세요.</p><ul class="howto"><li>⌨️ 방향키·WASD로 이동, 화면을 클릭/탭해도 걸어가요</li><li>🪧 Space로 푯말·건물 살펴보기, Esc로 닫기</li><li>🧭 T 또는 [섬 메뉴]로 바로 가기</li><li>🌙 N으로 밤의 섬</li></ul><p class="lead" style="margin-top:16px"><b>섬 곳곳</b></p><div class="menu">'+
   [['home','🏡 승주의 한옥','자기소개 · 경력 · 연락처'],['sec:work','🍅 작업실 밭','실무 주요 결과물 7'],['sec:projects','🌾 AI 프로젝트 밭','AI·데이터 프로젝트 6'],['sec:plans','🌱 새싹 밭','기획안 2'],['others','📌 게시판','수상 기록 · 대외활동'],['video','🎬 야외 영화관','생성형 AI 영상'],['skills','🧰 도구 창고','보유 기술'],['diary','📔 일기장','블로그 글']].map(function(r){return '<button data-guide="'+r[0]+'"><b>'+r[1]+'</b><span>'+r[2]+'</span></button>'}).join('')+'</div>'}
 function mailHtml(){return head('📮 우편함')+'<p class="lead">편지는 언제든 환영이에요! 함께 이야기 나누고 싶은 주제가 있다면 연락 주세요.</p><div class="btns"><a class="btnx" href="mailto:dororong69@gmail.com">✉ dororong69@gmail.com</a><a class="btnx alt" href="https://github.com/Zoe3399" target="_blank" rel="noopener">GitHub · Zoe3399</a></div>'}
 function diaryHtml(){return head('📔 승주의 일기장')+'<p class="lead">배운 것, 프로젝트 회고, AI 활용 팁을 기록해요.</p><div class="posts" id="postList">불러오는 중…</div><div class="btns" style="margin-top:14px"><a class="btnx alt" href="blog.html">일기장 전체 보기 →</a></div>'}
@@ -506,7 +506,7 @@ function start(){
     if(it){goTo(h,true)}else{showItem(h)}
     return}
   var seen=false;try{seen=sessionStorage.getItem('island-intro')==='1'}catch(e){}
-  if(!seen){say(['승주의 섬에 온 걸 환영해요!\n문제를 구조화하고, AI로 끝까지 실행하는 기획자 박승주예요.','남쪽 길에는 작업실 밭, 동쪽 다리 너머에는 AI 프로젝트 밭이 있어요.\n푯말 앞에서 Space(모바일은 A)를 눌러 보세요!','방향키로 걸어 다니고, 급하면 [섬 메뉴]를 눌러요.\n그럼, 섬 구경 시작!'],'승주',function(){try{sessionStorage.setItem('island-intro','1')}catch(e){}})}
+  if(!seen){say(['주섬주섬에 온 걸 환영해요!\n문제를 구조화하고, AI로 끝까지 실행하는 기획자 박승주예요.','남쪽 길에는 작업실 밭, 동쪽 다리 너머에는 AI 프로젝트 밭이 있어요.\n푯말 앞에서 Space(모바일은 A)를 눌러 보세요!','방향키로 걸어 다니고, 급하면 [섬 메뉴]를 눌러요.\n그럼, 섬 구경 시작!'],'승주',function(){try{sessionStorage.setItem('island-intro','1')}catch(e){}})}
 }
 var titleEl=document.getElementById('title'),started=false;
 var beginning=false;
