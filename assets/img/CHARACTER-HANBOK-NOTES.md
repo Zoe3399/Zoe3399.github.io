@@ -1,0 +1,23 @@
+# Hanbok villager
+
+Generated/edited with the built-in image_gen tool. No paid external API was used. Final asset: seungju-villager-hanbok-key.png. Four views: front, back, left, right. The same front view is used on the title and resident badge. Magenta is removed once at load so green clothing is preserved. Existing full-sprite movement is unchanged.
+
+Styling: preserve the bob haircut; everyday hanbok without wedding attire or ceremonial accessories. Warm ivory jeogori and sage chima.
+
+## Prompts
+
+Use case: identity-preserve / style-transfer.
+Edit target image 1: existing four-view sprite sheet of Seungju, a female island villager. Image 2 is STYLE reference only: the current hanok courtyard title screen.
+Create the replacement four-view character sprite sheet ONLY, on genuine transparent background. Keep exactly four equal cells in one horizontal row, in this order: front, back, left profile facing left, right profile facing right. Same character, identical outfit, same head and feet heights in all cells, full bodies entirely visible with generous margins. Match the original sprite sheet's 3:1 canvas aspect, pose and approximately 2.5-head-tall proportions, short limbs and round hands. Preserve her recognizable face, warm brown oval eyes, small triangular nose, gentle smile, side-parted dark brown chin-length bob and hair part direction.
+Change her materials to the smooth stylized Nintendo Animal Crossing New Horizons game-like graphics of the courtyard: sculpted broad hair clumps with soft highlights, NO individual realistic hair strands, clean matte skin, softly rounded volumes, simplified fabric shading, warm daylight from upper left. Not photorealistic, not glossy plastic, not flat vector art.
+Replace black office suit with a cozy contemporary Korean hanbok-inspired everyday outfit: warm ivory short jeogori wrap jacket with a neat muted sage green small side tie, subtle pale oatmeal collar, loose sage/moss green cropped trousers, simple cream rounded flat shoes. Fabric smooth and matte, very few folds, short rounded sleeves, both hands visible. Elegant understated countryside outfit fitting the hanok, not ceremonial costume, no hat, no accessories. Keep exact outfit consistent front/back/sides.
+No scene, no lettering, no floor, no ground shadow, no checkerboard illustration, no green screen. Genuine alpha transparency. Only the four full-body sprites.
+
+---
+
+Edit this sprite sheet, preserving EXACTLY all four characters, face, clothing, poses, spacing and canvas dimensions. Replace the entire checkerboard background with a perfectly flat pure chroma magenta #FF00FF background, including all gaps between limbs and between characters. No checkerboard, floor or shadows. No magenta on the characters. Also simplify ONLY the hair surface: remove realistic individual hair strands and fine noisy hair texture; use smooth matte sculpted broad dark-brown locks and broad soft highlights like an Animal Crossing game model. Keep the same bob silhouette, side part, colors, eyes, skin, outfit and alignment. All four full bodies remain uncut. Output the same 3:1 horizontal four-view sprite sheet.
+
+---
+
+Edit target: this four-view sprite sheet. Change ONLY the clothing to a traditional Korean woman's CHIMA JEOGORI hanbok, NOT trousers and NOT a modern wrap tunic. Preserve her face, dark brown sculpted bob hairstyle, smooth matte Animal Crossing-like graphics, body height, pose, camera, four-view order, equal cell spacing, light and pure magenta background exactly.
+Outfit: short warm ivory traditional jeogori ending just below the chest, clean white dongjeong V collar, modest muted sage otgoreum ribbons tied to one side of the chest with two small hanging ribbon ends, softly rounded traditional sleeves exposing round hands. A flowing pale sage / soft mugwort green high-waisted CHIMA skirt begins under the short jeogori and widens into a simple rounded bell silhouette to ankle length. The skirt is ONE continuous skirt, no trouser legs, no center leg seam. A few broad soft vertical folds, matte smooth game fabric, no realistic weave, no elaborate embroidery. Tiny warm cream traditional rounded shoes peek below hem. Character must still have the same original total height and large-head short-body proportions. Consistent skirt and jeogori in front, back, left-facing profile, right-facing profile. Keep all 4 full figures uncut. No additional hair ornament, no props. Perfectly flat #FF00FF background everywhere outside character silhouettes, including between hands and skirt, no floor or shadows, no text. Same 2172x724 / 3:1 horizontal sheet format.

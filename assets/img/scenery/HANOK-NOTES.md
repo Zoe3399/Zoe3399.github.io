@@ -1,0 +1,12 @@
+# 승주의 한옥
+
+Created with the built-in ImageGen tool on 2026-09-28, not the API/CLI or Higgsfield. The supplied Animal Crossing house examples informed the compact proportions and frontal camera. This is newly generated Korean hanok artwork, not an extracted Nintendo house.
+
+- Original: `seungju-hanok.png` (1254 × 1254, RGBA)
+- Runtime asset: `seungju-hanok.webp` (174,608 bytes, alpha preserved; encoding only, no repainting)
+- Appearance: charcoal giwa roof, timber pillars, ivory walls, hanji lattice windows, wooden porch, stone steps, gayageum and celadon vase.
+- Runtime: a single cached sprite, 208 world units high, aligned to the existing home's entrance. The original PNG is not loaded by the page. House collision width matches the wider porch; all original portfolio content remains unchanged.
+
+## Final generation prompt
+
+Use case: stylized-concept. Create ONE production-ready game building sprite: a cozy little Korean HANOK home for a woman who loves gayageum music, to replace the tent in an Animal Crossing: New Horizons-inspired browser island. Authentic soft Nintendo-like 3D toy rendering, rounded friendly low-rise game-house proportions, detailed but readable small. Korean charcoal blue-gray curved giwa tiled hip-and-gable roof with gently upswept eaves, warm honey-brown timber pillars and beams, ivory plaster, cream hanji lattice windows and central wooden lattice double entrance. Small raised wooden toenmaru porch and two broad rounded gray stone entry steps centered at the bottom. A recognizable long wooden twelve-string Korean GAYAGEUM rests horizontally on a low stand on the LEFT end of the porch, with visible strings and individual movable bridges; no piano keys, no guitar neck. One small celadon pot with restrained white flowers on right end. Soft warm glow inside windows. Compact single-storey house, width about 1.45 times height. Camera directly facing front, very slightly elevated to see roof and porch floor, symmetrical main building, orthographic, no extreme isometric side face. Gentle daylight from upper left, pleasing material shading, crisp clean silhouette. Entire house and porch fully visible with 8% transparent margin, feet of steps along one ground baseline. GENUINELY TRANSPARENT PNG alpha background, not a checkerboard picture. No environment, no lawn rectangle, no sky, no terrain tile, no characters, no text, no logos, no watermark, no large cast shadow outside the building. 1024x1024 image.
