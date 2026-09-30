@@ -426,6 +426,7 @@ document.getElementById('modal').addEventListener('click',function(e){if(e.targe
 function tpl(id){return document.getElementById('tpl-'+id)}
 function head(t){return '<h2 class="stitle" id="sheetTitle">'+t+'</h2>'}
 function proposalPreview(){return '<figure class="proposal-teaser"><img src="assets/img/teaser/proposal-closing-preview.jpg" alt="일부 고유명사를 흐린 사업 제안서의 마무리 슬라이드 미리보기" loading="lazy"><figcaption>제안서 마무리 슬라이드 맛보기 · 원본 PPT와 PDF는 비공개</figcaption></figure>'}
+function proposalGallery(){return '<div class="proposal-gallery" aria-label="흐림 처리한 공간 활용 제안서 일부 페이지"><figure><img src="assets/img/teaser/jotopium-market-preview.jpg" alt="흐린 시장 수요 분석 제안서 미리보기" loading="lazy"><figcaption>시장 수요 분석</figcaption></figure><figure><img src="assets/img/teaser/jotopium-space-preview.jpg" alt="흐린 공간 기능 배치 제안서 미리보기" loading="lazy"><figcaption>공간 기능 배치</figcaption></figure><figure><img src="assets/img/teaser/jotopium-concept-preview.jpg" alt="흐린 야외 공간 콘셉트 제안서 미리보기" loading="lazy"><figcaption>공간 콘셉트 설계</figcaption></figure></div>'}
 function showItem(id){
  var tp=tpl(id);if(!tp)return;
  var field=FIELDS.find(function(f){return f.items.some(function(item){return item[0]===id})});
@@ -433,7 +434,7 @@ function showItem(id){
  var listScroll=sourceButton?document.getElementById('sheet').scrollTop:0;
  var r=ALL[id],sec=r?(PROJ.indexOf(r)>=0?'🌾 AI 프로젝트 밭':WORK.indexOf(r)>=0?'🍅 작업실 밭':'🌱 새싹 밭'):'';
  var content=tp.innerHTML;
- if(id==='work-biz')content=content.replace('<div class="foot">',proposalPreview()+'<div class="foot">');
+ if(id==='work-biz')content=content.replace('<div class="foot">',proposalPreview()+proposalGallery()+'<div class="foot">');
  openModal((field?'<button type="button" class="guide-back" id="projectBack">← 목록으로</button>':'')+(sec?head(sec):'')+content);
  var back=document.getElementById('projectBack');
  if(back){back.addEventListener('click',function(){

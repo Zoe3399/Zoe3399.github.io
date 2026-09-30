@@ -139,6 +139,11 @@ h2 .place{font-size:14px;opacity:.85;font-family:'Noto Sans KR',sans-serif}
 .proposal-teaser{margin:18px 0 0;background:#f1eff0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .proposal-teaser img{display:block;width:100%;height:auto;max-height:235px;object-fit:cover;object-position:center}
 .proposal-teaser figcaption{padding:8px 12px;font-size:12px;text-align:center;color:var(--sub)}
+.proposal-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 0}
+.proposal-gallery figure{margin:0;background:#f1eff0;border:1px solid var(--line);border-radius:13px;overflow:hidden}
+.proposal-gallery img{display:block;width:100%;aspect-ratio:1.42;object-fit:cover}
+.proposal-gallery figcaption{padding:8px 6px;font-size:12px;text-align:center;color:var(--sub)}
+@media (max-width:640px){.proposal-gallery{grid-template-columns:1fr}.proposal-gallery img{aspect-ratio:1.7}}
 .phones{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
 .phones figure{margin:0}
 .phones img{display:block;width:100%;height:auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.15))}
