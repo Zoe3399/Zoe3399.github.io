@@ -428,6 +428,7 @@ function head(t){return '<h2 class="stitle" id="sheetTitle">'+t+'</h2>'}
 function competencyProof(){return '<section class="competency-proof" aria-labelledby="proofTitle"><h3 id="proofTitle">기획부터 운영 개선까지, 직접 검증하는 방식</h3><p>기획으로 끝내지 않고 요구사항을 구조화한 뒤, 화면·데이터·운영 절차로 구현하고 결과를 확인합니다.</p><div class="proof-grid"><div><b>플랫폼 운영·유지보수</b><span>점검과 개선 과제를 정리하고 사용자 유형별 기능 흐름을 고도화</span></div><div><b>서비스 구현</b><span>Next.js 기반 관리자 페이지의 UX 설계와 프론트·백엔드 직접 개발</span></div><div><b>AI·데이터 적용</b><span>분석·모델 검증을 서비스 의사결정과 운영 가이드에 연결</span></div><div><b>협업·검증</b><span>기획·디자인·개발 사이의 요구사항, 일정, 테스트 기준 조율</span></div></div><p class="career-flow"><b>역할을 넓혀 온 과정</b> 공공 서비스 PM → 플랫폼 운영·웹 개발 → 신사업·공간 콘텐츠 기획</p></section>'}
 function proposalPreview(){return '<figure class="proposal-teaser"><img src="assets/img/teaser/proposal-closing-preview.jpg" alt="일부 고유명사를 흐린 사업 제안서의 마무리 슬라이드 미리보기" loading="lazy"><figcaption>제안서 마무리 슬라이드 맛보기 · 원본 PPT와 PDF는 비공개</figcaption></figure>'}
 function proposalGallery(){return '<div class="proposal-gallery" aria-label="흐림 처리한 공간 활용 제안서 일부 페이지"><figure><img src="assets/img/teaser/jotopium-market-preview.jpg" alt="흐린 시장 수요 분석 제안서 미리보기" loading="lazy"><figcaption>시장 수요 분석</figcaption></figure><figure><img src="assets/img/teaser/jotopium-space-preview.jpg" alt="흐린 공간 기능 배치 제안서 미리보기" loading="lazy"><figcaption>공간 기능 배치</figcaption></figure><figure><img src="assets/img/teaser/jotopium-concept-preview.jpg" alt="흐린 야외 공간 콘셉트 제안서 미리보기" loading="lazy"><figcaption>공간 콘셉트 설계</figcaption></figure></div>'}
+function cafeProjectProof(){return '<section class="private-case"><h4>카페 조성·운영 통합 기획</h4><p>글로벌AD에서 공간 구성, 상권·수요 해석, 메뉴·원가·판매가 모델, 오픈 운영 기준을 하나의 실행안으로 정리했습니다.</p><div class="proposal-gallery" aria-label="흐림 처리한 카페 조성 운영 기획 일부 페이지"><figure><img src="assets/img/teaser/cafe-concept-preview.jpg" alt="흐린 공간과 브랜드 경험 통합 기획 미리보기" loading="lazy"><figcaption>공간과 브랜드 경험 통합</figcaption></figure><figure><img src="assets/img/teaser/cafe-space-preview.jpg" alt="흐린 공간 조건과 운영 기준 미리보기" loading="lazy"><figcaption>공간 조건과 운영 기준</figcaption></figure><figure><img src="assets/img/teaser/cafe-operations-preview.jpg" alt="흐린 운영 지표와 확장 기준 미리보기" loading="lazy"><figcaption>운영 지표와 확장 기준</figcaption></figure></div><small>내부 기획 자료 일부를 흐림 처리한 미리보기 · 원본 문서와 수치 자료는 비공개</small></section>'}
 function showItem(id){
  var tp=tpl(id);if(!tp)return;
  var field=FIELDS.find(function(f){return f.items.some(function(item){return item[0]===id})});
@@ -435,7 +436,7 @@ function showItem(id){
  var listScroll=sourceButton?document.getElementById('sheet').scrollTop:0;
  var r=ALL[id],sec=r?(PROJ.indexOf(r)>=0?'🌾 AI 프로젝트 밭':WORK.indexOf(r)>=0?'🍅 작업실 밭':'🌱 새싹 밭'):'';
  var content=tp.innerHTML;
- if(id==='work-biz')content=content.replace('<div class="foot">',proposalPreview()+proposalGallery()+'<div class="foot">');
+ if(id==='work-biz')content=content.replace('<div class="foot">',proposalPreview()+proposalGallery()+cafeProjectProof()+'<div class="foot">');
  openModal((field?'<button type="button" class="guide-back" id="projectBack">← 목록으로</button>':'')+(sec?head(sec):'')+content);
  var back=document.getElementById('projectBack');
  if(back){back.addEventListener('click',function(){
